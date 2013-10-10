@@ -13,3 +13,7 @@
 *.a
 
 .DS_Store
+
+empty/build/android/bin/*
+empty/build/android/gen/*
+empty/build/android/obj/*
