@@ -5,7 +5,7 @@ LWFK_DIR := $(realpath $(call my-dir)/../../../../../../lwfk)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE    := Slider
+LOCAL_MODULE    := Sliders
 
 ### Add all source file names to be included in lib separated by a whitespace
 LOCAL_SRC_FILES := \
@@ -58,7 +58,8 @@ LOCAL_LDLIBS :=  \
 				-llog \
 				-landroid \
 				-lEGL \
-				-lGLESv2
+				-lGLESv2 \
+				-lOpenSLES
 
 LOCAL_STATIC_LIBRARIES := \
 				          android_native_app_glue \
