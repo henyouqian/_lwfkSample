@@ -26,12 +26,14 @@ TitleTask::~TitleTask() {
 void TitleTask::vStart() {
     glClearColor(0.31f, 0.69f, 0.61f, 1.0f);
     _pSprite = lw::Sprite::createFromFile("title.png", "normal");
-    _pSound = lw::Sound::create("default.wav");
+    _pSound = lw::Sound::create("button1.wav");
+    _pSound2 = lw::Sound::create("b.wav");
 }
 
 void TitleTask::vStop() {
     delete _pSprite;
     delete _pSound;
+    delete _pSound2;
 }
 
 
@@ -46,7 +48,11 @@ void TitleTask::vDraw() {
 
 void TitleTask::vTouchBegan(const lw::Touch &touch) {
     lwinfo("vTouchBegan");
-    _pSound->play();
+    if (touch.y < 480) {
+        _pSound->play();
+    } else {
+        _pSound2->play();
+    }
 }
 
 void TitleTask::vTouchMoved(const lw::Touch &touch) {

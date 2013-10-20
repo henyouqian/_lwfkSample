@@ -27,6 +27,7 @@ private:
     
     lw::Sprite *_pSprite;
     lw::Sound *_pSound;
+    lw::Sound *_pSound2;
 };
 
 extern TitleTask gTitleTask;
